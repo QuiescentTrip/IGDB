@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0pjv7hmlsi7b"]
+
+[ext_resource type="Texture2D" uid="uid://n1c07jglbg8g" path="res://icon.svg" id="1_3qc4v"]
+
+[node name="Main_scene" type="Node2D"]
+
+[node name="Window" type="Window" parent="."]
+initial_position = 1
+transient = true
+
+[node name="Camera2D" type="Camera2D" parent="Window"]
+
+[node name="Icon" type="Sprite2D" parent="Window"]
+position = Vector2(88, 75)
+texture = ExtResource("1_3qc4v")
