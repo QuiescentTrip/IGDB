@@ -6,7 +6,7 @@ extends Node
 @onready var viewport2 = $Window2/Main_scene
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
+	$Window/Main_scene/Player.visible = false
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta):
@@ -14,7 +14,7 @@ func _process(_delta):
 	viewport.position = -window.position
 	window.position = get_viewport().get_mouse_position() - Vector2(60, 60)
 	viewport2.position = -window2.position
-	window2.position = $Path2D/PathFollow2D.position
+	window2.position = $Main_scene/Player.position - Vector2(120, 40)
 	
 	
 	
