@@ -1,0 +1,44 @@
+[gd_scene load_steps=5 format=3 uid="uid://dadwfbhkhnnbd"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_6erw4"]
+[ext_resource type="PackedScene" uid="uid://d0pjv7hmlsi7b" path="res://main_scene.tscn" id="2_2ab0w"]
+[ext_resource type="Texture2D" uid="uid://n1c07jglbg8g" path="res://icon.svg" id="3_nth84"]
+
+[sub_resource type="Curve2D" id="Curve2D_kdtcy"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, 1098, 850, 0, 0, 0, 0, 0, 0)
+}
+point_count = 2
+
+[node name="Game" type="Node"]
+script = ExtResource("1_6erw4")
+
+[node name="Main_scene" parent="." instance=ExtResource("2_2ab0w")]
+visible = false
+
+[node name="Window" type="Window" parent="."]
+initial_position = 1
+size = Vector2i(140, 140)
+unfocusable = true
+
+[node name="Main_scene" parent="Window" instance=ExtResource("2_2ab0w")]
+
+[node name="Icon" type="Sprite2D" parent="Window"]
+modulate = Color(1, 1, 1, 0.380392)
+position = Vector2(60, 60)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("3_nth84")
+
+[node name="Window2" type="Window" parent="."]
+position = Vector2i(135, 75)
+size = Vector2i(410, 210)
+
+[node name="Main_scene" parent="Window2" instance=ExtResource("2_2ab0w")]
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_kdtcy")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(496.405, 384.285)
+rotation = -2.48282
+progress = 760.793
