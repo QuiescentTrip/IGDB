@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://b4ai1kos8vtst"]
+
+[ext_resource type="Texture2D" uid="uid://boet4dihu1dj5" path="res://fillip/celeste background.jpg" id="1_62t7m"]
+[ext_resource type="Script" path="res://fillip/root.gd" id="1_wpv3e"]
+
+[node name="Flip" type="Node2D"]
+scale = Vector2(1.465, 1.465)
+script = ExtResource("1_wpv3e")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+scale = Vector2(1.06511, 1.75205)
+
+[node name="TextureRect" type="TextureRect" parent="."]
+offset_left = -40.0
+offset_top = -36.0
+offset_right = 2198.0
+offset_bottom = 1263.0
+texture = ExtResource("1_62t7m")
